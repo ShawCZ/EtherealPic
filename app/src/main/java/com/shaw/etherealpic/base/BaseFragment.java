@@ -19,6 +19,7 @@ import dagger.android.support.DaggerFragment;
  * @author XCZ
  */
 public abstract class BaseFragment<Presenter extends BaseContract.Presenter> extends DaggerFragment implements BaseContract.View {
+	public final String TAG = getClass().getSimpleName();
 	@Inject
 	public Presenter mPresenter;
 

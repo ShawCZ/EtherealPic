@@ -22,6 +22,10 @@ public abstract class LauncherModule {
 	@ContributesAndroidInjector
 	abstract LauncherFragment fragment();
 
+	@FragmentScoped
+	@ContributesAndroidInjector
+	abstract LauncherScrollFragment scrollFragment();
+
 	@ActivityScoped
 	@Binds
 	abstract LauncherContract.Presenter presenter(LauncherPresenter presenter);
