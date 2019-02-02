@@ -33,10 +33,7 @@ public class LauncherScrollFragment extends PresenterDelegate<LauncherContract.P
 	private ConvenientBanner<Integer> mConvenientBanner = null;
 	private TextView tvNext = null;
 	private static final ArrayList<Integer> INTEGERS = new ArrayList<>();
-
-	public LauncherScrollFragment() {
-		// Requires empty public constructor
-	}
+	private FrameLayout parentView;
 
 	@Override
 	public Object setLayout() {
@@ -58,8 +55,8 @@ public class LauncherScrollFragment extends PresenterDelegate<LauncherContract.P
 		tvNext.setBackgroundResource(R.drawable.shape_bg_tv);
 		tvNext.setPadding(30, 5, 30, 5);
 
-		FrameLayout parent = (FrameLayout) getActivity().getWindow().getDecorView().getRootView();
-		parent.addView(tvNext);
+		parentView = (FrameLayout) getActivity().getWindow().getDecorView().getRootView();
+		parentView.addView(tvNext);
 
 		FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) tvNext.getLayoutParams();
 		params.gravity = Gravity.BOTTOM | Gravity.END;
@@ -124,6 +121,7 @@ public class LauncherScrollFragment extends PresenterDelegate<LauncherContract.P
 		LattePreference.setAppFlag(LauncherFragment.INIT, true);
 		getSupportDelegate().startWithPop(new MainDelegate());
 		LauncherActivity.NEED_LAUNCHER = false;
+		parentView.removeView(tvNext);
 	}
 
 	@Override
