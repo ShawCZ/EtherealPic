@@ -1,6 +1,6 @@
 package com.shaw.etherealpic.ui.launcher;
 
-import com.shaw.etherealpic.base.BaseContract;
+import com.shaw.core.mvp.BaseContract;
 
 /**
  * Created on 2019/1/9.
@@ -8,11 +8,11 @@ import com.shaw.etherealpic.base.BaseContract;
  * @author XCZ
  */
 public interface LauncherContract {
-	interface View extends BaseContract.View {
+	interface View extends BaseContract.View<Presenter> {
 
 	}
 
-	interface Presenter extends BaseContract.Presenter<View> {
+	interface Presenter extends BaseContract.Presenter {
 
 	}
 }

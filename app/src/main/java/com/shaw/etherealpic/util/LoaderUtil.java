@@ -2,7 +2,6 @@ package com.shaw.etherealpic.util;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.Window;
@@ -14,6 +13,8 @@ import android.widget.TextView;
 import com.shaw.etherealpic.R;
 
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatDialog;
 
 
 /**

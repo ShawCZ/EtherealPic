@@ -1,7 +1,6 @@
 package com.shaw.etherealpic.util.glide;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
@@ -16,6 +15,7 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.io.InputStream;
 
+import androidx.annotation.NonNull;
 import okhttp3.OkHttpClient;
 
 /**

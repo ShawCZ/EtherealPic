@@ -2,8 +2,8 @@ package com.shaw.etherealpic.util;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.support.v7.graphics.Palette;
 
+import androidx.palette.graphics.Palette;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
